@@ -22,10 +22,10 @@ const spotData = require('./utils/spotData');
 
 // GET ALL SPOTS
 app.get('/spots', (req, res) => {
-	res.json({
-		code: 200,
+	res.status(200).send({
+		code: res.statusCode,
 		status: 'OK',
-		description: 'Selected all spot data from database',
+		description: 'selected all spots from database',
 		data: spotData
 	});
 });
@@ -41,10 +41,10 @@ app.get('/spots/:id', (req, res) => {
 
 		// Return spot object when id found
 		if (spot.id == paramId) {
-			res.json({
-				code: 200,
+			res.status(200).send({
+				code: res.statusCode,
 				status: 'OK',
-				description: 'Selected one spot from database',
+				description: `selected spot.id ${paramId} from database`,
 				data: spot
 			});
 		}
@@ -52,10 +52,10 @@ app.get('/spots/:id', (req, res) => {
 
 	// Check if requested spotId exist in spotIds
 	if (!spotIds.includes(paramId)) {
-		res.json({
-			code: 404,
+		res.status(404).send({
+			code: res.statusCode,
 			status: 'Not Found', // spotId does not exist
-			description: 'Spot does not exist in database',
+			description: `spot.id ${paramId} does not found in database`,
 			data: {}
 		});
 	}
@@ -64,6 +64,7 @@ app.get('/spots/:id', (req, res) => {
 /////////////////
 // L I S T E N //
 /////////////////
+
 app.listen(port, () => {
 	console.log(`Server running and listening on port ${port}`);
 });
