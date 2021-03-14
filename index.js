@@ -22,7 +22,7 @@ const spotData = require('./utils/spotData');
 
 // GET ALL SPOTS
 app.get('/spots', (req, res) => {
-	res.status(200).send({
+	res.status(200).json({
 		code: res.statusCode,
 		status: 'OK',
 		description: 'selected all spots from database',
@@ -41,7 +41,7 @@ app.get('/spots/:id', (req, res) => {
 
 		// Return spot object when id found
 		if (spot.id == paramId) {
-			res.status(200).send({
+			res.status(200).json({
 				code: res.statusCode,
 				status: 'OK',
 				description: `selected spot.id ${paramId} from database`,
@@ -52,10 +52,10 @@ app.get('/spots/:id', (req, res) => {
 
 	// Check if requested spotId exist in spotIds
 	if (!spotIds.includes(paramId)) {
-		res.status(404).send({
+		res.status(404).json({
 			code: res.statusCode,
 			status: 'Not Found', // spotId does not exist
-			description: `spot.id ${paramId} does not found in database`,
+			description: `spot.id ${paramId} not found in database`,
 			data: {}
 		});
 	}
