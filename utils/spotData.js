@@ -72,8 +72,8 @@ module.exports = [
 		title: 'Grad Cenote'
 	},
 	{
-		author: 'Peter Nichols ',
-		author_image_alt: 'Peter Nichols ',
+		author: 'Peter Nichols',
+		author_image_alt: 'Peter Nichols',
 		author_image_src: '/img/team/peter-nichols.jpg',
 		date: {
 			seconds: 1579801690
@@ -144,8 +144,8 @@ module.exports = [
 		title: 'Taj Mahal'
 	},
 	{
-		author: 'Peter Nichols ',
-		author_image_alt: 'Peter Nichols ',
+		author: 'Peter Nichols',
+		author_image_alt: 'Peter Nichols',
 		author_image_src: '/img/team/peter-nichols.jpg',
 		date: {
 			seconds: 1583394727
@@ -168,8 +168,8 @@ module.exports = [
 		title: 'Rainbow Mountain'
 	},
 	{
-		author: 'Peter Nichols ',
-		author_image_alt: 'Peter Nichols ',
+		author: 'Peter Nichols',
+		author_image_alt: 'Peter Nichols',
 		author_image_src: '/img/team/peter-nichols.jpg',
 		date: {
 			seconds: 1582743162
