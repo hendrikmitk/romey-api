@@ -56,7 +56,7 @@ module.exports = [
 		},
 		id: 3,
 		image: {
-			alt: 'Grad Cenote',
+			alt: 'Gran Cenote',
 			src: '/img/grand-cenote.jpg'
 		},
 		location: {
@@ -69,7 +69,7 @@ module.exports = [
 		},
 		text:
 			'The Gran Cenote is one of the most famous cenotes in Mexico. Located just a few kilometres from Tulum on the way to Coba, this is one of the top diving spots in Riviera Maya. Although its name suggests it is only one big cenote, it really consists of several cenotes meandering along the verdant jungle floor and connected by wooden walkways. The color of the water is so clear that one can see fish swimming without even snorkeling. Gran Cenote is one of the most popular spots to snorkel. Its water is so crystal clear that a lot of the underwater life can be seen without going in a deep dive.',
-		title: 'Grad Cenote'
+		title: 'Gran Cenote'
 	},
 	{
 		author: 'Peter Nichols',
