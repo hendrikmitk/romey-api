@@ -1,12 +1,15 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use((req, res, next) => {
-	res.setHeader('Access-Control-Allow-Origin', '*');
-	res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-	next();
-});
+// Configuring CORS middleware
+app.use(
+	cors({
+		origin: '*',
+		methods: 'GET'
+	})
+);
 
 app.use(express.json());
 
@@ -66,5 +69,5 @@ app.get('/spots/:id', (req, res) => {
 /////////////////
 
 app.listen(port, () => {
-	console.log(`Server running and listening on port ${port}`);
+	console.log(`CORS-enabled web server running and listening on port ${port}`);
 });
